@@ -1,0 +1,27 @@
+What is the patient's name? danilo.
+Does danilo have a fever (y/n) ?
+
+Does danilo have a conjunctivitis (y/n) ?n
+Does danilo have a fever (y/n) ?n
+Does danilo have a chills (y/n) ?y
+Does danilo have a fever (y/n) ?y
+Does danilo have a headache (y/n) ?y
+Does danilo have a body_ache (y/n) ?y
+Does danilo have a conjunctivitis (y/n) ?y
+Does danilo have a sore_throat (y/n) ?y
+Does danilo have a runny_nose (y/n) ?y
+Does danilo have a cough (y/n) ?y
+danilo probably has flu.
+true .
+
+What is the patient's name? saul.
+Does saul have a fever (y/n) ?
+
+Does saul have a conjunctivitis (y/n) ?y
+Does saul have a cough (y/n) ?y
+Does saul have a fever (y/n) ?y
+Does saul have a runny_nose (y/n) ?y
+Does saul have a rash (y/n) ?y
+saul probably has measles.
+true.
+

@@ -90,9 +90,9 @@ hypothesis(Patient,dummy) :-
 
 % Checa si el usuario tiene sarampión
 hypothesis(Patient,measles) :-
+	symptom(Patient,conjunctivitis),
+	symptom(Patient,cough),
     symptom(Patient,fever),
-    symptom(Patient,cough),
-    symptom(Patient,conjunctivitis),
     symptom(Patient,runny_nose),
     symptom(Patient,rash).
 
@@ -105,11 +105,11 @@ hypothesis(Patient,german_measles) :-
 
 % Checa si el paciente tiene gripe
 hypothesis(Patient,flu) :-
+    symptom(Patient,chills),
     symptom(Patient,fever),
     symptom(Patient,headache),
     symptom(Patient,body_ache),
     symptom(Patient,conjunctivitis),
-    symptom(Patient,chills),
     symptom(Patient,sore_throat),
     symptom(Patient,runny_nose),
     symptom(Patient,cough).
@@ -124,14 +124,14 @@ hypothesis(Patient,common_cold) :-
 
 % Checa si el paciente tiene paperas
 hypothesis(Patient,mumps) :-
-    symptom(Patient,fever),
-    symptom(Patient,swollen_glands).
+	symptom(Patient,swollen_glands),
+    symptom(Patient,fever).
 
 % Checa si el paciente tiene varicela
 hypothesis(Patient,chicken_pox) :-
+    symptom(Patient,body_ache),
     symptom(Patient,fever),
     symptom(Patient,chills),
-    symptom(Patient,body_ache),
     symptom(Patient,rash).
 
 % Declaramos una manera de escibir la lista, teniendo dos tipos de "Términos"

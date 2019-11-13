@@ -2,3 +2,4 @@ https://stackoverflow.com/questions/6082779/syntax-error-operator-expected-in-pr
 https://stackoverflow.com/questions/28975901/issues-with-prologs-write-function
 http://www.dailyfreecode.com/Code/prolog-medical-diagnostic-system-3075.aspx
 https://www.swi-prolog.org/pldoc/doc_for?object=get0/1
+https://www.swi-prolog.org/pldoc/man?predicate=get_single_char/1

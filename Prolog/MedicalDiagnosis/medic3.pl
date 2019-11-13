@@ -1,4 +1,9 @@
 
+% Empezamos el programa preguntando el nombre del paciente y luego prolog
+% hará un match con las funciones declaradas abajo
+% Al finalizar se describe la enfermedad que tiene el paciente, y en caso de 
+% no figurar los síntomas en la base de datos, se le imprimirá al usuario
+% que el sistema no es capaz de diagnosticar la enfermedad
 go :-
     write('What is the patient''s name? '),
     read(Patient),
@@ -129,12 +134,18 @@ hypothesis(Patient,chicken_pox) :-
     symptom(Patient,body_ache),
     symptom(Patient,rash).
 
-% Declaramos una manera de escibir la lista, teniendo dos tipos de "Términos" 
+% Declaramos una manera de escibir la lista, teniendo dos tipos de "Términos"
+% para poder diferenciar el string normal de la variable 
 write_list([]).
 write_list([Term| Terms]) :-
     write(Term),
     write_list(Terms).
 
+% Declaramos la función de respuesta para que lea el caracter ingresado
+% (y o n)
+% y luego que el output sea el caracter, mientras tanto el get_single_char nos
+% permite no esperar a otra acción, sino que lee apenas el usuario ingrese un 
+% caracter
 response(Reply) :-
     get_single_char(Code),
     put_code(Code), nl,

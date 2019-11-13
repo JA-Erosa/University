@@ -4,13 +4,13 @@
 % Al finalizar se describe la enfermedad que tiene el paciente, y en caso de 
 % no figurar los síntomas en la base de datos, se le imprimirá al usuario
 % que el sistema no es capaz de diagnosticar la enfermedad
-go :-
+start :-
     write('What is the patient''s name? '),
     read(Patient),
     hypothesis(Patient,Disease),
     write_list([Patient,' probably has ',Disease,'.']),nl.
 
-go :-
+start :-
     write('Sorry, I don''t seem to be able to diagnose the disease.'),nl.
 
 %Síntomas (inicio de base de datos)

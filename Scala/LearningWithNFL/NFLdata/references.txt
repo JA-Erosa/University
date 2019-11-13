@@ -1,0 +1,7 @@
+https://www.geeksforgeeks.org/abstract-classes-in-scala/
+https://www.scala-exercises.org/scala_tutorial/polymorphic_types
+https://www.geeksforgeeks.org/scala-polymorphism/
+https://www.tutorialspoint.com/scala/scala_arrays.htm
+https://stackoverflow.com/questions/3343934/simple-question-about-tuple-of-scala
+https://stackoverflow.com/questions/7525412/reading-multiple-inputs-from-the-same-line-the-scala-way
+https://www.nfl.com/standings/division/2019/REG

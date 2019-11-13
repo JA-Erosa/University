@@ -83,7 +83,7 @@ symptom(Patient,swollen_glands) :-
 % Hipótesis 
 % En este apartado iremos preguntando (en orden) y si el paciente responde que no, se salta a la siguiente hipótesis. 
 % Se introdujo al principio un dummy porque el programa salta esta primera pregunta (por alguna extraña razón) cuando el usuario da 
-% enter
+% enter (bug por arreglar).
 
 hypothesis(Patient,dummy) :-
 	symptom(Patient,fever).

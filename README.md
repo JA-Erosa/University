@@ -4,4 +4,4 @@ This Repository is for beginners who have no idea what they're doing, like I was
 
 Programming Languages used so far:
 
-Python, C, Scala, Prolog, Erlang
+Python, Scala, C, Prolog, Erlang

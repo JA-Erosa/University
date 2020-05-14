@@ -1,0 +1,39 @@
+***Conectando al servidor con el username y contraseña pregenerados
+mongo "mongodb+srv://cluster0-qwc17.mongodb.net/test" --username erosa --password generico
+
+show dbs
+use test
+db.getCollectionNames()
+db.erosa.find()
+db.erosa.update({"name":"Zeus"},{"$set":{"child":"JasonGrace"}})
+db.erosa.update({"name":"Athena"},{"$set":{"Attributes":{"EyeColor":"grey","HairColor":"silver","Powers":3}}})
+db.erosa.update({"name":"Zeus"},{"$set":{"Attributes":{"EyeColor":"blue","HairColor":"blonde","Powers":1}}})
+
+db.erosa.find({"Attributes.HairColor":"silver"}).pretty()
+
+db.erosa.update({"name":"Zeus"},{"$inc":{"Attributes.Powers":1}})
+
+ db.erosa.update({"name":"Zeus"},{"$set":{"siblings":["Hades","Poseidon"]}})
+
+db.erosa.update({"name":"Zeus"},{"$set":{"siblings.1":"Stitch"}})
+
+db.erosa.update({"name":"Zeus"},{"$pop":{"siblings":1}})
+
+db.erosa.update({"name":"Zeus"},{"$pop":{"siblings":-1}})
+
+pull quita todos los elementos
+
+db.collecionEpicaJack.find({"epicidad":{"$gt":200}}).pretty()
+
+db.erosa.update({"name":"Zeus"},{"$set":{"randomNum":[1,2,3,4,5,6,7,8,9,10]}})
+
+db.erosa.find({"randomNum":{"$elemMatch":{"$gt":3, "$lt":8}}}).pretty()
+
+db.erosa.find({"randomNum":{"$elemMatch":{"$gt":3, "$lt":8}}}).pretty().count()
+
+
+
+
+
+
+

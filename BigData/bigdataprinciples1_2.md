@@ -45,6 +45,12 @@ Realtime computation system   | Storm
 
 #### Chapter 2
 
-##### 1. Match the product to the technology type:
+##### 1. What is only part of the Lambda Architecture that absolutely must be safeguarded from corruption?:
+  - Master Dataset
 
+##### 2. Choose the correct term: It's the general collection of knowledge relevant to your Big Data system.It’s synonymous with the colloquial usage of the word data.
+a) information
+b) data
+c) queries
+d) views
 

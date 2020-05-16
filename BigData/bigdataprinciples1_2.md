@@ -73,10 +73,10 @@ Realtime computation system   | Storm
   - information
 
 ##### 6. List the 3 key properties of data:
-  -rawness, immutability and perpetuity
+  - rawness, immutability and perpetuity
   
 ##### 7. Complete the sentence "The _____ your data, the more questions you can ask of it":
-  -rawer
+  - rawer
 
 ##### 8. Is queryable at any time in its history, Tolerates human errors, Handles partial information, Has the advantages of both normalized and denormalized forms. These are all benefits of:
   - The fact-based model

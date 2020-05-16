@@ -1,5 +1,7 @@
 ## Big Data Principles Chapters 1 and 2 Questions
 
+~~Important: on the table and choose questions the answers are in order or are the first option~~
+
 #### Chapter 1
 
 ##### 1. List some of the RDBMS problems Big Data solves: 

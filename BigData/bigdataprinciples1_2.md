@@ -85,5 +85,8 @@ Realtime computation system   | Storm
 ##### 7. Complete the sentence "The _____ your data, the more questions you can ask of it":
   - rawer
 
-##### 8. Is queryable at any time in its history, Tolerates human errors, Handles partial information, Has the advantages of both normalized and denormalized forms. These are all benefits of:
+##### 8. Define graph schema:
+  - A graph schema is a "dictionary" that defines the types of entities, vertices and edges , in the graph and how those types of entities are related to one another. 
+  
+##### 9. Is queryable at any time in its history, Tolerates human errors, Handles partial information, Has the advantages of both normalized and denormalized forms. These are all benefits of:
   - The fact-based model

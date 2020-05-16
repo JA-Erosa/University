@@ -1,6 +1,4 @@
-## Big Data Principles Chapters 1 and 2 Questions
-\titlespacing{\title}{0pt}
-### by: Jorge Agustín Erosa
+## Big Data Principles Chapters 1 and 2 Questions by: Jorge Agustín Erosa
 
 ~~Important: on the table and choose questions the answers are in order or are the first option~~
 

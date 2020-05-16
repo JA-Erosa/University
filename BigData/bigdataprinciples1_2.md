@@ -49,8 +49,34 @@ Realtime computation system   | Storm
   - Master Dataset
 
 ##### 2. Choose the correct term: It's the general collection of knowledge relevant to your Big Data system.It’s synonymous with the colloquial usage of the word data.
-a) information
-b) data
-c) queries
-d) views
+  - information
+  - data
+  - queries
+  - views
+  
+##### 3. Choose the correct term: It refers to the information that can’t be derived from anything else. Data serves as the axioms from which everything else derives.
+  - data
+  - information
+  - queries
+  - views
+  
+##### 4. Choose the correct term: Questions you ask of your data. For example, you query your financial transaction history to determine your current bank account balance.
+  - queries
+  - data
+  - information
+  - views
+  
+##### 5. Choose the correct term: Information that has been derived from your base data. They are built to assist with answering specific types of queries.
+  - views
+  - data
+  - queries
+  - information
 
+##### 6. List the 3 key properties of data:
+  -rawness, immutability and perpetuity
+  
+##### 7. Complete the sentence "The _____ your data, the more questions you can ask of it":
+  -rawer
+
+##### 8. Is queryable at any time in its history, Tolerates human errors, Handles partial information, Has the advantages of both normalized and denormalized forms. These are all benefits of:
+  - The fact-based model

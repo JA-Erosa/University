@@ -2,6 +2,11 @@
 
 ~~Important: on the table and choose questions the answers are in order or are the first option~~
 
+- [Chapter 1](#chapter-1)
+  
+- [Chapter 2](#chapter-2)
+  
+
 #### Chapter 1
 
 ##### 1. List some of the RDBMS problems Big Data solves: 

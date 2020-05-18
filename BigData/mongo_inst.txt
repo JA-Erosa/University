@@ -55,4 +55,18 @@ db.listingsAndReviews.aggregate([{"$group":{"_id":"$property_type","total":{"$su
 
 db.listingsAndReviews.aggregate([{"$group":{"_id":"$property_type","total":{"$sum":1},"bedroom_total":{"$sum":"$bedrooms"}}},{"$sort":{"total":-1}},{$limit:5}])
 
+db.listingsAndReviews.aggregate([{"$group":{"_id":"$property_type","total":{"$sum":1},"bedroom_total":{"$sum":"$bedrooms"}, "bedroom_avg":{"$avg":"$bedrooms"}, "bedroom_max":{"$max":"$bedrooms"},"bedroom_min":{"$min":"$bedrooms"}}},{"$sort":{"total":-1}},{$limit:5}])
 
+
+db.listingsAndReviews.aggregate([{"$match":{"property_type":"House"}},{"$group":{"_id":"$bedrooms","bed_count":{"$sum": "$beds"}}},{"$sort":{"bed_count":1}}]).pretty()
+
+db.listingsAndReviews.aggregate([{"$match":{"property_type":"House"}},{"$group":{"_id":"$bedrooms","bed_count":{"$sum": "$beds"},"properties":{"$sum":1}}},{"$sort":{"bed_count":-1}},{"$limit":5}]).pretty()
+
+db.listingsAndReviews.aggregate([{"$match":{"property_type":"House"}},{"$group":{"_id":"$bedrooms","bed_count":{"$sum": "$beds"},"properties":{"$sum":1}}},{"$sort":{"properties":-1}},{"$limit":5}]).pretty()
+
+db.listingsAndReviews.aggregate([{"$match":{"property_type":"House"}},{"$project":{"property_type":true,"bedrooms":true,"beds":true}},{"$group":{"_id":"$bedrooms","bed_count":{"$sum": "$beds"},"properties":{"$sum":1}}},{"$sort":{"properties":-1}},{"$limit":5}]).pretty()
+
+
+
+Conteo de CASAS por PAÍS, ordenadas por AVERAGE RATINGS
+db.listingsAndReviews.aggregate([{"$match":{"property_type":"House"}},{"$group":{"_id":"$address.country","property_count":{"$sum": 1},"AvgRatings":{"$avg":"$review_scores.review_scores_rating"},"TotalRatings":{"$sum":"$review_scores.review_scores_rating"}}},{"$sort":{"AvgRatings":-1}}]).pretty()

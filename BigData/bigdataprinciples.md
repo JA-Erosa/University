@@ -1,11 +1,16 @@
-## Big Data Principles Chapters 1 and 2 Questions by: Jorge Agustín Erosa
+## Big Data Principles Chapters 1-4 Questions by: Jorge Agustín Erosa
 
 ~~Important: on the table and choose questions the answers are in order or are the first option~~
 
 - [Chapter 1](#chapter-1)
   
 - [Chapter 2](#chapter-2)
+
+- [Chapter 3](#chapter-3)
   
+- [Chapter 4](#chapter-4)
+
+
 
 #### Chapter 1
 
@@ -90,3 +95,12 @@ Realtime computation system   | Storm
   
 ##### 9. Is queryable at any time in its history, Tolerates human errors, Handles partial information, Has the advantages of both normalized and denormalized forms. These are all benefits of:
   - The fact-based model
+  
+  
+#### Chapter 3
+
+
+
+
+#### Chapter 4
+

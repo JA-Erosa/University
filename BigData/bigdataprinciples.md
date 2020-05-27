@@ -12,6 +12,7 @@
 
 
 
+
 #### Chapter 1
 
 ##### 1. List some of the RDBMS problems Big Data solves: 
@@ -53,6 +54,7 @@ Serialization frameworks      | Thrift
 Random-access NoSQL database  | Cassandra
 Messaging/queuing systems     | Kafka
 Realtime computation system   | Storm
+
 
 
 #### Chapter 2
@@ -97,8 +99,11 @@ Realtime computation system   | Storm
   - The fact-based model
   
   
+  
+  
 #### Chapter 3
 
+##### 1. :
 
 
 

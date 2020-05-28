@@ -133,4 +133,41 @@ Realtime computation system   | Storm
 
 #### Chapter 4
 
-##### 1.
+##### 1. Why must the storage solution for the master dataset be optimized to handle a large, constantly growing set of data?.
+  - Because data is immutable and eternally true. Consequently, each piece of your data will be written once and only once.
+Therefore, there's no need to ever alter your data, the only write operation will be to add a new data unit to your dataset
+
+##### 2. What are the Write/Read requirements for the dataset?:
+  - Efficient appends of new data
+  - Scalable storage
+  - Support for parallel processing
+  - Tunable storage and processing costs
+  - Enforceable immutability
+
+##### 3. Why is generating a UUID to use as a key the only really viable idea in a key-value storage?:
+  - Because there’s no natural key in the data model, nor is one necessary because the data is meant to be consumed in bulk. 
+
+##### 4. Why is key-value storage considered non-optimal in this cas?
+  - Because they are meant to be used as mutable stores. It also has a ton of things we don't need such as random reads, random writes, and all the machinery behind making those work.
+
+##### 5. Filesystems pros and cons:
+  - Pros: stored sequentially on disk, we have full control over the bytes of a file, and we have the full freedom to compress them however we want, it implements fine-grained permissions systems, which are perfect for enforcing immutability, 
+  - Cons: it exists on just a single machine, so you can only scale to the storage limits and processing power of that one machine
+
+##### 6. Difference between regular filesystems and distributed filesystems:
+  - Distributed filesystems spread their storage across a cluster of computers. They scale by adding more machines to the cluster. They have fault tolerance because of their distributed nature.
+  - In distributed filesystems you may not be able to write to the middle of a file or even modify a file at all after creation. Also having small files can be inefficients, 64 mb min is usually a good measure
+  
+##### 7. How does HDFS work in general?:
+  - Hadoop is deployed across multiple servers as clusters and HDFS manages them. It basically works with a namenode that stores the information of the file/block and its location; and also works with multiple datanodes (typically 3) which are the replicas of the file.
+
+##### 8. Natural advantage of this system?:
+  - Fault tolerance:
+  - With each block replicated across multiple nodes, your data remains available even when individual nodes are offline.
+  - Files are spread across multiple machines for scalability and also to enable parallel processing.
+  
+##### 9. The files are immutable what should I do with my Distributed Filesystem (hdfs)?:
+  - Spread the master dataset among many files, and store all those files in the same folder
+  
+##### 10. How can we achieve Vertically Partitioning of data on a distributed filesystem?:
+  - By sorting your data into separate folders. For example, suppose you’re storing login information on a distributed filesystem. Each login contains a username, IP address, and timestamp. To vertically partition by day, you can create a separate folder for each day of data. Each day folder would have many files containing the logins for that day. Now if you only want to look at a particular subset of your dataset, you can just look at the files in those particular folders and ignore the other files.

@@ -170,4 +170,4 @@ Therefore, there's no need to ever alter your data, the only write operation wil
   - Spread the master dataset among many files, and store all those files in the same folder
   
 ##### 10. How can we achieve Vertically Partitioning of data on a distributed filesystem?:
-  - By sorting your data into separate folders. For example, suppose you’re storing login information on a distributed filesystem. Each login contains a username, IP address, and timestamp. To vertically partition by day, you can create a separate folder for each day of data. Each day folder would have many files containing the logins for that day. Now if you only want to look at a particular subset of your dataset, you can just look at the files in those particular folders and ignore the other files.
+  - By sorting your data into separate folders. For example, you can create a separate folder for each day of data. Each day folder would have many files containing the logins for that day. Now if you only want to look at a particular subset of your dataset, you can just look at the files in those particular folders and ignore the other files.

@@ -103,7 +103,31 @@ Realtime computation system   | Storm
   
 #### Chapter 3
 
-##### 1. :
+##### 1. What's the problem with using schemaless formats like json and what can you use instead?:
+  - Using schemaless data almost always leads to bugs or developers misunderstanding which ultimately leads to data corruption. The problem is it won't show right away and will give you little context of the error. You can instead make use of Serialization Frameworks (enforceable schema) which raises errors at the moment of writing the data, with full context and prevents it from corrupting the master data.
+  
+#### 2. Why is Apache Thrift desirable when talking about enforceable schemas?:
+  - Because it acts as a canvas for multiple programming languages, you can design the schema and then appply it to any programming language you want.
+  
+#### 3. What are unions, structs and properties used in Apache Thrift?:
+  - unions are useful for representing nodes and allow the schema to evolve as the data evolves, structs are natural representations of edges (struct containing two nodes), and properties use a combination of both.
+
+#### 4. What do the name and fields of struct indicate?:
+  - The relationship it represents, and the fields in the struct contain the entities involved in the relationship.
+
+#### 5. Why would you want to use a DataUnit union?:
+  - To wrap and store all of the data together to provide a single interface to access your information. This way the data is easier to manage.
+  
+#### 6. Besides the wrapped-data what else is the DataUnit paired with and what do each store?:
+  - The Pedigree struct which contains the metadata, the timestamp for the information, but could also potentially contain debugging information or the source of the data.The final Data struct corresponds to a fact from the fact-based model.
+  
+#### 7. What can you do to evolve the schema and what are the limitations?:
+  - Fields may be renamed
+  - A field may be removed, but you must never reuse that field ID
+  - Only optional fields can be added to existing structs
+
+#### 8. What can you do in Apache Thrift to work around a serialization framework limitations such as “Ages should be non-negative” or “true-as-of timestamps should not be in the future” ?:
+  - Wrap your generated code in additional code that checks the additional properties you care about, like ages being non-negative. Check the extra properties at the very beginning of your batch-processing workflow.
 
 
 

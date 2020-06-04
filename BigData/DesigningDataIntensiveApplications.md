@@ -58,8 +58,8 @@ ciently on a single tool, and those different tools are stitched together using 
   
 ##### 13. How do data systems make routine tasks easier?
   - Providing visibility into the runtime behavior and internals of the system, with good monitoring
-  - Providing good support for automation and integration with standard tools   - Avoiding dependency on individual machines (allowing machines to be taken down for maintenance while the system as a whole continues running uninter‐
-rupted)
+  - Providing good support for automation and integration with standard tools   
+  - Avoiding dependency on individual machines (allowing machines to be taken down for maintenance while the system as a whole continues running uninterrupted)
   - Providing good documentation and an easy-to-understand operational model (“If I do X, Y will happen”)
   - Providing good default behavior, but also giving administrators the freedom to override defaults when needed
   - Self-healing where appropriate, but also giving administrators manual control over the system state when needed

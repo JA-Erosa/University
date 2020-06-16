@@ -1,7 +1,7 @@
-Team:
-Jack Robles
-Saúl Luna
-Jorge Erosa
+## Team:
+- Jack Robles
+- Saúl Luna
+- Jorge Erosa
 
 # Time series databases
 

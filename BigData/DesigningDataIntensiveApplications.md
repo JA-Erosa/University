@@ -104,4 +104,3 @@ tion, all the relevant information is in one place, and one query is sufficient.
   - The web graph: Vertices are web pages, and edges indicate HTML links to other pages.
   - Road or rail networks: Vertices are junctions, and edges represent the roads or railway lines between them.
   
-##### 10.

@@ -3,6 +3,7 @@
 ~~Important: on the table and choose questions the answers are in order or are the first option~~
 
 - [Chapter 1](#chapter-1)
+- [Chapter 2](#chapter-2)
   
 
 
@@ -64,3 +65,43 @@ ciently on a single tool, and those different tools are stitched together using 
   - Providing good default behavior, but also giving administrators the freedom to override defaults when needed
   - Self-healing where appropriate, but also giving administrators manual control over the system state when needed
   - Exhibiting predictable behavior, minimizing surprises 
+  
+
+#### Chapter 2
+
+##### 1. Why NoSQL, why did it start?
+  - A need for greater scalability than relational databases can easily achieve, including very large datasets or very high write throughput
+  - A widespread preference for free and open source software over commercial database products
+  - Specialized query operations that are not well supported by the relational model
+  - Frustration with the restrictiveness of relational schemas, and a desire for a more dynamic and expressive data model
+  
+##### 2. Why do we call it NoSQL when it could be SQL and what has it changed into?
+  - NoSQL was originally intended simply as a catchy Twitter hashtag for a meetup on open source, distributed, nonrelational databases in 2009, now the meaning has changed to Not Only SQL.
+  
+##### 3. What do Object-relational mapping (ORM) frameworks do?
+  - reduce the amount of boilerplate code required for this translation layer (OOP -> SQL), but they can’t completely hide the differences between the two models.
+  
+##### 4. Multitable schema vs JSON
+  - If you want to fetch a profile in the relational example, you need to either perform multiple queries (query each table by user_id ) or perform a messy multiway join between the users table and its subordinate tables. In the JSON representa‐
+tion, all the relevant information is in one place, and one query is sufficient.
+
+##### 5. Hierarchical vs Network models
+  - H->1 parent, N-> can have multiple parents
+  
+##### 6. Relational vs Document models
+  - The main arguments in favor of the document data model are schema flexibility, better performance due to locality, and that for some applications it is closer to the data structures used by the application.
+  - The relational model counters by providing better support for joins, and many-to-one and many-to-many relationships.
+
+##### 7. Declarative vs Imperative query language
+  - An imperative language tells the computer to perform certain operations in a certain order. You can imagine stepping through the code line by line, evaluating conditions, updating variables, and deciding whether to go around the loop one more time.
+  - In a declarative query language, like SQL or relational algebra, you just specify the pattern of the data you want—what conditions the results must meet, and how you want the data to be transformed (e.g., sorted, grouped, and aggregated)—but not how to achieve that goal.
+
+##### 8. MapReduce declarative or imperative?
+  - MapReduce is neither a declarative query language nor a fully imperative query API, but somewhere in between: the logic of the query is expressed with snippets of code, which are called repeatedly by the processing framework.
+
+##### 9. Typical examples of graph models
+  - Social graphs: Vertices are people, and edges indicate which people know each other.
+  - The web graph: Vertices are web pages, and edges indicate HTML links to other pages.
+  - Road or rail networks: Vertices are junctions, and edges represent the roads or railway lines between them.
+  
+##### 10.

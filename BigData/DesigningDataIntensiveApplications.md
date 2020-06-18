@@ -1,4 +1,4 @@
-## Designing Data-Intensive Applications Chapter 1 Questions by: Jorge Agustín Erosa
+## Designing Data-Intensive Applications Chapter 1 & 2 Questions by: Jorge Agustín Erosa
 
 ~~Important: on the table and choose questions the answers are in order or are the first option~~
 

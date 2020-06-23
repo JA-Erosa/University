@@ -32,16 +32,19 @@ The code works as intended and we tried with 3 different files, all of them cont
 - English: e, t, a and d
 - Spanish: a, e, s and l
 - Greek: τ, α, ν and ε
+
 We can notice the difference in languages almost immediately. Spanish and English differ in letters, but the Greek one is different from a symbolic point of view.
 Another important feature to notice is the difference in the amount of characters used. As we could observe, the character count gave us:
 - English: 44 characters
 - Spanish: 48 characters
 - Greek: 70 characters
+
 This also already sets a different path from the Greek coding in relation to the others.
 After creating our Huffman Tree, we have the "path" or binary encoding for each letter in each language. We can see that using our code, the largest character count in binary is:
 - English: 12
 - Spanish: 12
 - Greek: 12
+
 Which means the Greek tree is distributed well if the maximum length of 70 characters can have the same one as one of 44 characters (the English one). However if we take a look at the symbols they differ quite a bit when following the distribution of all 3 languages. 
 
 ## Conclusions

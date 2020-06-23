@@ -35,9 +35,9 @@ In conclusion, data compression and data science are related as it helps to bett
 ## References
 - D.A. Huffman, "A method for the construction of minimum-redundancy codes", Proceedings of the I.R.E., sept 1952, pp 1098-1102
 - Burrows, M., & Wheeler, D. J. (1994). A block-sorting lossless data compression algorithm.
-![Huffman Coding Problem Definition] (https://es.wikipedia.org/wiki/Codificaci%C3%B3n_Huffman#Definici%C3%B3n_del_problema)
-- https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
-- https://www.datasciencedegreeprograms.net/faq/what-is-data-compression/
-- https://www.quora.com/Can-you-imagine-how-we-can-use-data-science-for-data-compression
-- https://towardsdatascience.com/winning-the-data-compression-game-af145363ae49#:~:text=Huffman%20coding%20works%20by%20building,to%20that%20symbol's%20leaf%20node.&text=The%20Huffman%20encoder%20starts%20by,nodes%2C%20one%20for%20each%20symbol
-- https://towardsdatascience.com/how-data-compression-works-exploring-lz77-3a2c2e06c097
+- [Huffman Coding Problem Definition](https://es.wikipedia.org/wiki/Codificaci%C3%B3n_Huffman#Definici%C3%B3n_del_problema)
+- [G4G Huffman Coding Greedy Algorithm](https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/)
+- [What is Data Compression?](https://www.datasciencedegreeprograms.net/faq/what-is-data-compression/)
+- [How can we use Data Science for Data Compression](https://www.quora.com/Can-you-imagine-how-we-can-use-data-science-for-data-compression)
+- [Winning the Data Compression Game](https://towardsdatascience.com/winning-the-data-compression-game-af145363ae49#:~:text=Huffman%20coding%20works%20by%20building,to%20that%20symbol's%20leaf%20node.&text=The%20Huffman%20encoder%20starts%20by,nodes%2C%20one%20for%20each%20symbol)
+- [How Data Compression Works (lz77)](https://towardsdatascience.com/how-data-compression-works-exploring-lz77-3a2c2e06c097)

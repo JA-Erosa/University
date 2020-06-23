@@ -25,12 +25,27 @@ Building the tree:
 1. Create a leaf node for each unique character and build a min heap of all leaf nodes (Min Heap is used as a priority queue. The value of frequency field is used to compare two nodes in min heap. Initially, the least frequent character is at root)
 2. Extract two nodes with the minimum frequency from the min heap.
 3. Create a new internal node with a frequency equal to the sum of the two nodes frequencies. Make the first extracted node as its left child and the other extracted node as its right child. Add this node to the min heap.
-4. Repeat steps#2 and #3 until the heap contains only one node. The remaining node is the root node and the tree is complete.
+4. Repeat steps 2 and 3 until the heap contains only one node. The remaining node is the root node and the tree is complete.
 
 ## Results
+The code works as intended and we tried with 3 different files, all of them containing Genesis 1 from the Bible. The difference is that one file is in English, one in Spanish and the last one in Greek. This allows us to see the difference in input and output files (original and compressed). As we could observe the highest initial frecuencies were:
+- English: e, t, a and d
+- Spanish: a, e, s and l
+- Greek: τ, α, ν and ε
+We can notice the difference in languages almost immediately. Spanish and English differ in letters, but the Greek one is different from a symbolic point of view.
+Another important feature to notice is the difference in the amount of characters used. As we could observe, the character count gave us:
+- English: 44 characters
+- Spanish: 48 characters
+- Greek: 70 characters
+This also already sets a different path from the Greek coding in relation to the others.
+After creating our Huffman Tree, we have the "path" or binary encoding for each letter in each language. We can see that using our code, the largest character count in binary is:
+- English: 12
+- Spanish: 12
+- Greek: 12
+Which means the Greek tree is distributed well if the maximum length of 70 characters can have the same one as one of 44 characters (the English one). However if we take a look at the symbols they differ quite a bit when following the distribution of all 3 languages. 
 
 ## Conclusions
-In conclusion, data compression and data science are related as it helps to better understand the data, compresses it and is easier to read, which increases the efficiency of the program and helps the result of data analysis.
+In conclusion, data compression and data science are related as it helps to better store and possibly explote the data, which increases the efficiency of the program and helps the process of data analysis.
 
 ## References
 - D.A. Huffman, "A method for the construction of minimum-redundancy codes", Proceedings of the I.R.E., sept 1952, pp 1098-1102

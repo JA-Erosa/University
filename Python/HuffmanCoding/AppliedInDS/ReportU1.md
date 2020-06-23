@@ -47,8 +47,17 @@ After creating our Huffman Tree, we have the "path" or binary encoding for each 
 
 Which means the Greek tree is distributed well if the maximum length of 70 characters can have the same one as one of 44 characters (the English one). However if we take a look at the symbols they differ quite a bit when following the distribution of all 3 languages. 
 
+The Huffman magic comes in play when we watch the difference in size when comparing the compressed binaries to the original ones.
+- English: from  3.97 KB to 2.123 KB
+- Spanish: from 3.76 KB to 2.026 KB
+- Greek: from  8.08 KB to 2.463 KB
+
+We could already see it coming from the maximum character length and although every file reduced in size, the Greek file is the most noticeable.
+
 ## Conclusions
 In conclusion, data compression and data science are related as it helps to better store and possibly explote the data, which increases the efficiency of the program and helps the process of data analysis.
+
+We, as a team, consider that through the Huffman Coding processing of a large well-known manuscript (such as the Bible) in several languages, we can create a "generic" dictionary or encryption key to compress files of those languages and just store them with the original character length and the compressed file, so the key can work correctly. This could help in diminishing the space needed in databases to browse through manuscripts, ans also a more ordered way to distinguish each file while having them grouped by language.
 
 ## References
 - D.A. Huffman, "A method for the construction of minimum-redundancy codes", Proceedings of the I.R.E., sept 1952, pp 1098-1102

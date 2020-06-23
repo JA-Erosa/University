@@ -1,3 +1,8 @@
+![UPY logo]()
+#### Elaborated by Saúl Luna Estévez & Jorge Agustín Erosa Herrera
+
+#Information Management Data 5A
+
 ## Huffman Compression
 In 1951, David Huffman and his classmates in the subject “Information Theory” were allowed to choose between taking a final exam or presenting a paper. Professor Robert. M. Fano assigned the working conditions under the premise of finding the most efficient binary code. Huffman, unable to demonstrate which code was more efficient, gave up and began studying for the final exam. While in this process the idea of using ordered frequency binary trees came to his mind and he quickly proved that this was the most efficient method.
 

@@ -16,10 +16,10 @@ The technique used is Huffman's own algorithm. It consists of creating a binary 
 
 Subsequently, the edges that join each of the nodes are labeled with zeros and ones (right and left son, respectively, for example). The resulting code for each character is the reading, following the branch, from the root to each character (or vice versa) of each of the edge labels.
 Building the tree:
-    1. Create a leaf node for each unique character and build a min heap of all leaf nodes (Min Heap is used as a priority queue. The value of frequency field is used to compare two nodes in min heap. Initially, the least frequent character is at root)
-    2. Extract two nodes with the minimum frequency from the min heap.
-    3. Create a new internal node with a frequency equal to the sum of the two nodes frequencies. Make the first extracted node as its left child and the other extracted node as its right child. Add this node to the min heap.
-    4. Repeat steps#2 and #3 until the heap contains only one node. The remaining node is the root node and the tree is complete.
+1. Create a leaf node for each unique character and build a min heap of all leaf nodes (Min Heap is used as a priority queue. The value of frequency field is used to compare two nodes in min heap. Initially, the least frequent character is at root)
+2. Extract two nodes with the minimum frequency from the min heap.
+3. Create a new internal node with a frequency equal to the sum of the two nodes frequencies. Make the first extracted node as its left child and the other extracted node as its right child. Add this node to the min heap.
+4. Repeat steps#2 and #3 until the heap contains only one node. The remaining node is the root node and the tree is complete.
 
 ## Results
 

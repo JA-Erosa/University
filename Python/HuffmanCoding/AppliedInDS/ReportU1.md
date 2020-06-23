@@ -27,7 +27,7 @@ Building the tree:
 3. Create a new internal node with a frequency equal to the sum of the two nodes frequencies. Make the first extracted node as its left child and the other extracted node as its right child. Add this node to the min heap.
 4. Repeat steps 2 and 3 until the heap contains only one node. The remaining node is the root node and the tree is complete.
 
-For this research we decided to focus on the Huffman coding, as a pathway to compress files in an efficient way to catalog texts by language and save them with a "generic"  
+For this research we decided to focus on the Huffman coding, as a pathway to compress files in an efficient way to catalog texts by language and save them with a "generic" dictionary in order to genralize the compression algorithm and, in doing so, diminishing the space taken by written text in storage devices. Doing it by language so every symbol is included depending on the language, but not creating a universal one, which would just take up time by adding unnecessary filters. 
 
 ## Results
 The code works as intended and we tried with 3 different files, all of them containing Genesis 1 from the Bible. The difference is that one file is in English, one in Spanish and the last one in Greek. This allows us to see the difference in input and output files (original and compressed). As we could observe the highest initial frecuencies were:

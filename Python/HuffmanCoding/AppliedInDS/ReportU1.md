@@ -4,7 +4,7 @@
 ### Data 5A
 #### Elaborated by Saúl Luna Estévez & Jorge Agustín Erosa Herrera
 
-## Huffman Compression
+## Introduction to Huffman Compression
 In 1951, David Huffman and his classmates in the subject “Information Theory” were allowed to choose between taking a final exam or presenting a paper. Professor Robert. M. Fano assigned the working conditions under the premise of finding the most efficient binary code. Huffman, unable to demonstrate which code was more efficient, gave up and began studying for the final exam. While in this process the idea of using ordered frequency binary trees came to his mind and he quickly proved that this was the most efficient method.
 
 With this study, Huffman surpassed his professor, who had worked with the inventor of information theory Claude Shannon in order to develop a similar code. Huffman fixed most of the bugs in the Shannon-Fano encoding algorithm. The solution was based on the process of building the tree from bottom to top instead of the other way around.
@@ -31,3 +31,13 @@ Building the tree:
 
 ## Conclusions
 In conclusion, data compression and data science are related as it helps to better understand the data, compresses it and is easier to read, which increases the efficiency of the program and helps the result of data analysis.
+
+## References
+D.A. Huffman, "A method for the construction of minimum-redundancy codes", Proceedings of the I.R.E., sept 1952, pp 1098-1102
+https://es.wikipedia.org/wiki/Codificaci%C3%B3n_Huffman#Definici%C3%B3n_del_problema
+https://www.geeksforgeeks.org/huffman-coding-greedy-algo-3/
+https://www.datasciencedegreeprograms.net/faq/what-is-data-compression/
+https://www.quora.com/Can-you-imagine-how-we-can-use-data-science-for-data-compression
+Burrows, M., & Wheeler, D. J. (1994). A block-sorting lossless data compression algorithm.
+https://towardsdatascience.com/winning-the-data-compression-game-af145363ae49#:~:text=Huffman%20coding%20works%20by%20building,to%20that%20symbol's%20leaf%20node.&text=The%20Huffman%20encoder%20starts%20by,nodes%2C%20one%20for%20each%20symbol
+https://towardsdatascience.com/how-data-compression-works-exploring-lz77-3a2c2e06c097

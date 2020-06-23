@@ -70,3 +70,4 @@ We also consider that using the Huffman "algorithm" probably isn't the best way 
 - [How can we use Data Science for Data Compression](https://www.quora.com/Can-you-imagine-how-we-can-use-data-science-for-data-compression)
 - [Winning the Data Compression Game](https://towardsdatascience.com/winning-the-data-compression-game-af145363ae49#:~:text=Huffman%20coding%20works%20by%20building,to%20that%20symbol's%20leaf%20node.&text=The%20Huffman%20encoder%20starts%20by,nodes%2C%20one%20for%20each%20symbol)
 - [How Data Compression Works (lz77)](https://towardsdatascience.com/how-data-compression-works-exploring-lz77-3a2c2e06c097)
+- [Letter Frequency Distribution Table by language](https://en.wikipedia.org/wiki/Letter_frequency)

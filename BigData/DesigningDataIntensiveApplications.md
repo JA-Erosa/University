@@ -4,7 +4,7 @@
 
 - [Chapter 1](#chapter-1)
 - [Chapter 2](#chapter-2)
-  
+- [Chapter 3](#chapter-3)
 
 
 #### Chapter 1
@@ -104,3 +104,8 @@ tion, all the relevant information is in one place, and one query is sufficient.
   - The web graph: Vertices are web pages, and edges indicate HTML links to other pages.
   - Road or rail networks: Vertices are junctions, and edges represent the roads or railway lines between them.
   
+  
+#### Chapter 3
+
+##### 1.
+

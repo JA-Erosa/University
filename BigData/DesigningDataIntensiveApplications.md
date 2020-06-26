@@ -107,5 +107,34 @@ tion, all the relevant information is in one place, and one query is sufficient.
   
 #### Chapter 3
 
-##### 1.
+##### 1. What does the word "log" usually refer to?
+  - The word log is often used to refer to application logs, where an application outputs text that describes what’s happening
 
+##### 2. What is an index? Does it affect the contents of the database?
+  - is an additional structure that is derived from the primary data. Many databases allow you to add and remove indexes, and this doesn’t affect the contents of the database; it only affects the performance of queries
+  
+##### 3. Name some advantages of append-only logs
+  - Appending and segment merging are sequential write operations, which are generally much faster than random writes, especially on magnetic spinning-disk
+hard drives. To some extent sequential writes are also preferable on flash-based solid state drives (SSDs). 
+  - Concurrency and crash recovery are much simpler if segment files are appendonly or immutable. For example, you don’t have to worry about the case where a
+crash happened while a value was being overwritten, leaving you with a file containing part of the old and part of the new value spliced together.
+  - Merging old segments avoids the problem of data files getting fragmented over time.
+
+##### 4. Explain size-tiered and leveled compaction as strategies to determine the order and timing of how SSTables are compacted and merged.
+  - In size-tiered compaction,newer and smaller SSTables are successively merged into older and larger SSTables.
+  - In leveled compaction, the key range is split up into smaller SSTables and older data is moved into separate “levels,” which allows the compaction to proceed more incrementally and use less disk space.
+  
+##### 5. What do full-text search engines commonly allow?
+  - a search for one word to be expanded to include synonyms of the word, to ignore grammatical variations of words, and to search for occurrences of words near each other in the same document, and support various other features that depend on linguistic analysis of the text.
+  
+##### 6. Are Cassandra and HBase column oriented?
+  - Cassandra and HBase have a concept of column families, which they inherited from Bigtable. However, it is very misleading to call them column-oriented: within each column family, they store all columns from a row together, along with a row key, and they do not use column compression. Thus, the Bigtable model is still mostly row-oriented.
+
+##### 7. Name another advantage of sorted order:
+  - it can help with compression of columns. If the primary sort column does not have many distinct values, then after sorting, it will have long sequences where the same value is repeated many times in a row. A simple run-length encoding could compress that column down to a few kilobytes—even if the table has billions of rows.
+  
+##### 8. What do we mean when we say that OLTP systems are typically user-facing?
+  - It  means that they may see a huge volume of requests. In order to handle the load, applications usually only touch a small number of records in each query. The application requests records using some kind of key, and the storage engine uses an index to find the data for the requested key. Disk seek time is often the bottleneck here.
+  
+##### 9. How do Data Warehouses and similar analytic systems compare to OLTP systems?
+  - They handle a much lower volume of queries than OLTP systems, but each query is typically very demanding, requiring many millions of records to be scanned in a short time. Disk bandwidth (not seek time) is often the bottleneck here, and columnoriented storage is an increasingly popular solution for this kind of workload

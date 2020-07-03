@@ -5,6 +5,7 @@
 - [Chapter 1](#chapter-1)
 - [Chapter 2](#chapter-2)
 - [Chapter 3](#chapter-3)
+- [Chapter 4](#chapter-4)
 
 
 #### Chapter 1
@@ -138,3 +139,8 @@ crash happened while a value was being overwritten, leaving you with a file cont
   
 ##### 9. How do Data Warehouses and similar analytic systems compare to OLTP systems?
   - They handle a much lower volume of queries than OLTP systems, but each query is typically very demanding, requiring many millions of records to be scanned in a short time. Disk bandwidth (not seek time) is often the bottleneck here, and columnoriented storage is an increasingly popular solution for this kind of workload
+
+
+#### Chapter 4
+
+##### 1.

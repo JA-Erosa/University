@@ -194,4 +194,19 @@ maintained documentation may easily diverge from reality).
 ##### 10. Explain service oriented architecture (SOA), more recently refined and rebranded as microservices architecture:
   - A server can itself be a client to another service (for example, a typical web app server acts as client to a database). This approach is often used to decompose a large application into smaller services by area of functionality, such that one service makes a request to another when it requires some functionality or data from that other service.
   
-##### 11. 
+##### 11. What is REST?
+  - EST is not a protocol, but rather a design philosophy that builds upon the principles of HTTP. It emphasizes simple data formats, using URLs for identifying
+resources and using HTTP features for cache control, authentication, and content type negotiation.
+
+##### 12. What is SOAP?
+  - SOAP is an XML-based protocol for making network API requests. Although it is most commonly used over HTTP, it aims to be independent from HTTP and avoids using most HTTP features. Instead, it comes with a sprawling and complex multitude of related standards
+  
+##### 13. What is the actor model? What is distributed actor frameworks?
+  - It's a programming model for concurrency in a single process. Each actor typically represents one client or entity, it may have some local state (which is not shared with any other actor), and it communicates with other actors by sending and receiving asynchronous messages.
+  - It's a programming model used to scale an application across multiple nodes.
+  
+##### 14. Name three popular distributed actor frameworks and how they handle message encoding:
+  - Akka uses Java’s built-in serialization by default, which does not provide forward or backward compatibility. However, you can replace it with something like Protocol Buffers, and thus gain the ability to do rolling upgrades.
+  - Orleans by default uses a custom data encoding format that does not support rolling upgrade deployments; to deploy a new version of your application, you need to set up a new cluster, move traffic from the old cluster to the new one, and shut down the old one. Like with Akka, custom serialization plug-ins can be used.
+  - In Erlang OTP it is surprisingly hard to make changes to record schemas (despite the system having many features designed for high availability); rolling upgrades are possible but need to be planned carefully. An experimental new maps datatype (a JSON-like structure, introduced in Erlang R17 in 2014) may make this easier in the future.
+

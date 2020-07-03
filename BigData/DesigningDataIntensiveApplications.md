@@ -143,4 +143,55 @@ crash happened while a value was being overwritten, leaving you with a file cont
 
 #### Chapter 4
 
-##### 1.
+##### 1. What's the difference when dealing with updates on server-side and client-side applications?
+  - With server-side applications you may want to perform a rolling upgrade (also known as a staged rollout), deploying the new version to a few nodes at a time,
+checking whether the new version is running smoothly, and gradually working your way through all the nodes. This allows new versions to be deployed without service downtime, and thus encourages more frequent releases and better evolvability.
+  - With client-side applications you’re at the mercy of the user, who may not install
+the update for some time.
+
+##### 2. What are Backward and Forward compatibility and why are they necessary/useful?
+  - Backward compatibility means newer code can read data that was written by older code. Forward compatibility means older code can read data that was written by newer code.
+  - Sometimes old and new versions of the code, and old and new data formats may potentially all coexist in the system at the same time. These are necessary to keep the application running smoothly.
+  
+##### 3. What is encoding and what is decoding?
+  - The translation from the in-memory representation to a byte sequence is called encoding (also known as serialization or marshalling), and the reverse is called decoding (parsing, deserialization, unmarshalling).
+  
+##### 4. Name some programming languages built-in support for encoding in-memory objects into byte sequences:
+  - Java has java.io.Serializable, Ruby has Marshal, Python has pickle, etc.
+  
+##### 5. Is it a good or a bad idea to use your language’s built-in encoding? Explain
+  - It's bad.
+  - The encoding is often tied to a particular programming language, and reading the data in another language is very difficult. If you store or transmit data in such an encoding, you are committing yourself to your current programming language for potentially a very long time, and precluding integrating your systems
+with those of other organizations (which may use different languages).
+  - In order to restore data in the same object types, the decoding process needs to be able to instantiate arbitrary classes. This is frequently a source of security problems: if an attacker can get your application to decode an arbitrary byte sequence, they can instantiate arbitrary classes, which in turn often allows them to do terrible things such as remotely executing arbitrary code. 
+  - Versioning data is often an afterthought in these libraries: as they are intended for quick and easy encoding of data, they often neglect the inconvenient problems of forward and backward compatibility.
+  - Efficiency (CPU time taken to encode or decode, and the size of the encoded structure) is also often an afterthought. For example, Java’s built-in serialization is notorious for its bad performance and bloated encoding
+
+##### 6. Name some issues with Standardized encoding  (JSON, XML, and CSV)
+  - There is a lot of ambiguity around the encoding of numbers. In XML and CSV, you cannot distinguish between a number and a string that happens to consist of
+digits (except by referring to an external schema). JSON distinguishes strings and numbers, but it doesn’t distinguish integers and floating-point numbers, and it
+doesn’t specify a precision. This is a problem when dealing with large numbers; for example, integers greater than 2 53 cannot be exactly represented in an IEEE 754 double-precision floating-point number, so such numbers become inaccurate when parsed in a language that uses floating-point numbers (such as JavaScript). An example of numbers larger than 2 53 occurs on Twitter, which uses a 64-bit number to identify each tweet. The JSON returned by Twitter’s API includes tweet IDs twice, once as a JSON number and once as a decimal string, to work around the fact that the numbers are not correctly parsed by JavaScript applications.
+  - JSON and XML have good support for Unicode character strings (i.e., human-readable text), but they don’t support binary strings (sequences of bytes without
+a character encoding). Binary strings are a useful feature, so people get around this limitation by encoding the binary data as text using Base64. The schema is
+then used to indicate that the value should be interpreted as Base64-encoded. This works, but it’s somewhat hacky and increases the data size by 33%.
+  - There is optional schema support for both XML  and JSON . These schema languages are quite powerful, and thus quite complicated to learn and implement. Use of XML schemas is fairly widespread, but many JSON-based tools don’t bother using schemas. Since the correct interpretation of data (such as numbers and binary strings) depends on information in the schema, applications that don’t use XML/JSON schemas need to potentially hardcode the appropriate encoding/decoding logic instead.
+  - CSV does not have any schema, so it is up to the application to define the meaning of each row and column. If an application change adds a new row or column,
+you have to handle that change manually. CSV is also a quite vague format (what happens if a value contains a comma or a newline character?). Although its escaping rules have been formally specified , not all parsers implement them correctly.
+
+##### 7. Name some advantages of binary encodings based on schemas:
+  - They can be much more compact than the various “binary JSON” variants, since they can omit field names from the encoded data.
+  - The schema is a valuable form of documentation, and because the schema is required for decoding, you can be sure that it is up to date (whereas manually
+maintained documentation may easily diverge from reality).
+  - Keeping a database of schemas allows you to check forward and backward compatibility of schema changes, before anything is deployed.
+  - For users of statically typed programming languages, the ability to generate code from the schema is useful, since it enables type checking at compile time.
+  
+##### 8. Explain the phrase "data outlives code":
+  - When you deploy a new version of your application (of a server-side application, at least), you may entirely replace the old version with the new version within a few minutes. The same is not true of database contents: the five-year-old data will still be there, in the original encoding, unless you have explicitly rewritten it since then.
+ 
+##### 9. Briefly explain the network connection relationship between clients, servers and service:
+  - The servers expose an API over the network, and the clients can connect to the servers to make requests to that API. The API exposed by the server is known as a service.
+ 
+##### 10. Explain service oriented architecture (SOA), more recently refined and rebranded as microservices architecture:
+  - A server can itself be a client to another service (for example, a typical web app server acts as client to a database). This approach is often used to decompose a large application into smaller services by area of functionality, such that one service makes a request to another when it requires some functionality or data from that other service.
+  
+##### 11. 

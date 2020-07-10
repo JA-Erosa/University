@@ -251,4 +251,11 @@ leader as they happen.
   
 ##### 8. What is and in what case would you want to provide cross-device read-after-write consistency? 
   - If the user enters some information on one device and then views it on another device, they should see the information they just entered
-  - 
+  - When the same user is accessing your service from multiple devices, for example a desktop web browser and a mobile app.
+  
+##### 9. What are transactions and why do they exist?
+  - They are a way for a database to provide stronger guarantees so that the application can be simpler.
+  - They exist so the application developers don’t have to worry about subtle replication issues and can just trust their databases to “do the right thing".
+  
+##### 10. What is multi-leader configuration?
+  - A  natural extension of the leader-based replication model is to allow more than one node to accept writes. Replication still happens in the same way: each node that processes a write must forward that data change to all the other nodes. In this setup, each leader simultaneously acts as a follower to the other leaders. Also known as master–master or active/active replication. 

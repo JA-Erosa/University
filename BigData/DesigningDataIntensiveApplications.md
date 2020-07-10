@@ -6,6 +6,7 @@
 - [Chapter 2](#chapter-2)
 - [Chapter 3](#chapter-3)
 - [Chapter 4](#chapter-4)
+- [Chapter 5](#chapter-5)
 
 
 #### Chapter 1
@@ -210,3 +211,7 @@ resources and using HTTP features for cache control, authentication, and content
   - Orleans by default uses a custom data encoding format that does not support rolling upgrade deployments; to deploy a new version of your application, you need to set up a new cluster, move traffic from the old cluster to the new one, and shut down the old one. Like with Akka, custom serialization plug-ins can be used.
   - In Erlang OTP it is surprisingly hard to make changes to record schemas (despite the system having many features designed for high availability); rolling upgrades are possible but need to be planned carefully. An experimental new maps datatype (a JSON-like structure, introduced in Erlang R17 in 2014) may make this easier in the future.
 
+
+#### Chapter 5
+
+##### 1. 

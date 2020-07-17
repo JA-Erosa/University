@@ -263,4 +263,6 @@ leader as they happen.
 
 
 #### Chapter 6
-##### 1.
+##### 1. What do we call "skewed" partitioning and what is a "hot spot"?
+  - Skewed partitioning: When the partitioning is unfair, so that some partitions have more data or queries than others. The presence of skew makes partitioning much less effective. In an extreme case, all the load could end up on one partition, so 9 out of 10 nodes are idle and your bottleneck is the single busy node.
+  - Hot Spot: A partition with disproportionately high load.

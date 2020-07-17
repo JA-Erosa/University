@@ -7,6 +7,7 @@
 - [Chapter 3](#chapter-3)
 - [Chapter 4](#chapter-4)
 - [Chapter 5](#chapter-5)
+- [Chapter 6](#chapter-6)
 
 
 #### Chapter 1
@@ -259,3 +260,7 @@ leader as they happen.
   
 ##### 10. What is multi-leader configuration?
   - A  natural extension of the leader-based replication model is to allow more than one node to accept writes. Replication still happens in the same way: each node that processes a write must forward that data change to all the other nodes. In this setup, each leader simultaneously acts as a follower to the other leaders. Also known as master–master or active/active replication. 
+
+
+#### Chapter 6
+##### 1.

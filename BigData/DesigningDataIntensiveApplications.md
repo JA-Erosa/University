@@ -272,4 +272,39 @@ leader as they happen.
   
   
 #### Chapter 7
-##### 1.
+##### 1. What's a transaction and what does it do conceptually?
+  - It's a way for an application to group several reads and writes together into a logical unit. Conceptually, all the reads and writes in a transaction are executed as one operation: either the entire transaction succeeds (commit) or it fails (abort, rollback).
+  
+##### 2. What do we call safety guarantees?
+  - When using transactions, the application is free to ignore certain potential error scenarios and concurrency issues, because the database takes care of them instead.
+  
+##### 3. What is ACID atomicity?
+  - ACID atomicity describes what happens if a client wants to make several writes, but a fault occurs after some of the writes have been processed—for example, a process crashes, a network connection is interrupted, a disk becomes full, or some integrity constraint is violated. If the writes are grouped together into an atomic
+transaction, and the transaction cannot be completed (committed) due to a fault, then the transaction is aborted and the database must discard or undo any writes it has made so far in that transaction. Without atomicity, if an error occurs partway through making multiple changes, it’s difficult to know which changes have taken effect and which haven’t. The application could try again, but that risks making the same change twice, leading to duplicate or incorrect data. Atomicity simplifies this problem: if a transaction was aborted, the application can be sure that it didn’t change anything, so it can safely be retried.
+
+##### 4. What is ACID consistency?
+  - The idea of ACID consistency is that you have certain statements about your data (invariants) that must always be true—for example, in an accounting system, credits and debits across all accounts must always be balanced. If a transaction starts with a database that is valid according to these invariants, and any writes during the transaction preserve the validity, then you can be sure that the invariants are always satisfied.
+  
+##### 5. What is ACID isolation?
+  - Most databases are accessed by several clients at the same time. That is no problem if they are reading and writing different parts of the database, but if they are accessing the same database records, you can run into concurrency problems (race conditions).
+  - Isolation in the sense of ACID means that concurrently executing transactions are isolated from each other: they cannot step on each other’s toes. The classic database textbooks formalize isolation as serializability, which means that each transaction can pretend that it is the only transaction running on the entire database. The database ensures that when the transactions have committed, the result is the same as if they had run serially (one after another), even though in reality they may have run concurrently.
+  
+##### 6. What is ACID durability?
+  - The purpose of a database system is to provide a safe place where data can be stored without fear of losing it. Durability is the promise that once a transaction has committed successfully, any data it has written will not be forgotten, even if there is a hardware fault or the database crashes.
+  
+##### 7. Why are concurrency bugs hard to find by testing?
+  - Because such bugs are only triggered when you get unlucky with the timing. Such timing issues might occur very rarely, and are usually difficult to reproduce.
+  
+##### 8. What does serializable isolation mean?
+  - It means that the database guarantees that transactions have the same effect as if they ran serially (i.e., one at a time, without any concurrency).
+  
+##### 9. What is the most basic level of transaction isolation and what does it guarantee?
+  - Read commited.
+  - 1. When reading from the database, you will only see data that has been committed (no dirty reads).
+  - 2. When writing to the database, you will only overwrite data that has been committed (no dirty writes).
+  
+##### 10. What is the idea of snapshot isolation?
+  - The idea is that each transaction reads from a consistent snapshot of the database—that is, the transaction sees all the data that was committed in the database at the start of the transaction. Even if the data is subsequently changed by another transaction, each transaction sees only the old data from that particular point in time.
+  
+ 
+

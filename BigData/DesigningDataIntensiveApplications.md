@@ -269,8 +269,30 @@ leader as they happen.
   - Skewed partitioning: When the partitioning is unfair, so that some partitions have more data or queries than others. The presence of skew makes partitioning much less effective. In an extreme case, all the load could end up on one partition, so 9 out of 10 nodes are idle and your bottleneck is the single busy node.
   - Hot Spot: A partition with disproportionately high load.
 
-#### 2. Faltan preguntas del 6 se me olvidó (fue el día que sólo planteamos una para la clase), las subo en un rato
+#### 2. What is rebalancing?
+
+  - The process of moving load from one node in the cluster to another.
   
+#### 3. Whats is an anti-entropy process?
+
+  - In addition, some datastores have a background process that constantly looks for differences in the data between replicas and copies any missing data from one replica to another. Unlike the replication log in leader-based replication, this anti-entropy process does not copy writes in any particular order, and there may be a significant delay before data is copied.
+
+#### 4. What is a parallel query?
+
+  - Parallel query is a method used to increase the execution speed of SQL queries by creating multiple query processes that divide the workload of a SQL statement and executing it in parallel or at the same time.
+  
+#### 5. What is implementing Key range partitioning?
+
+  - Where keys are sorted, and a partition owns all the keysfrom some minimum up to some maximum. Sorting has the advantage that efficient range queries are possible, but there is a risk of hot spots if the application often accesses keys that are close together in the sorted order
+
+#### 6. What is Hash partitioning?
+
+  - Where a hash function is applied to each key, and a partition owns a range of hashes. This method destroys the ordering of keys, making range queries inefficient, but may distribute load more evenly. When partitioning by hash, it is common to create a fixed number of partitions in advance, to assign several partitions to each node, and to move entire partitions from one node to another when nodes are added or removed. Dynamic partitioning can also be used.
+
+#### 7. What is the Range partitioning?
+
+  - A table that is partitioned by range is partitioned in such a way that each partition contains rows for which the partitioning expression value lies within a given range. Ranges should be contiguous but not overlapping, and are defined using the VALUES LESS THAN operator.
+
 #### Chapter 7
 ##### 1. What's a transaction and what does it do conceptually?
   - It's a way for an application to group several reads and writes together into a logical unit. Conceptually, all the reads and writes in a transaction are executed as one operation: either the entire transaction succeeds (commit) or it fails (abort, rollback).

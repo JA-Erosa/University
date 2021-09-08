@@ -1,4 +1,4 @@
-# GoogleMaps API Tutorial <img src="https://raw.githubusercontent.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/gm.png" width="100" height="100">
+# GoogleMaps API Tutorial <img src=https://github.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/gm.png width="100" height="100">
 
 by Jorge Agustín Erosa, Jesús Catzín, Saúl Luna & Mario Morales 
 

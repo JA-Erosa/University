@@ -12,8 +12,8 @@ API stands for Application Programming Interface, which is basically a communica
 
 Before starting to work with the API, we’ll a google cloud API key. For this, you need to access the website [GoogleCloud](https://cloud.google.com), then access the “Try it for free” option that displays on top of the screen. You’ll need to fill all the required information, which includes a credit or debit card. Don’t worry! Google won’t charge you for what we’re about to do, the key, has a limited amount of requests available but during the making of this particular project none of the team members reached it, the highest request number being 475, so under this number, Google shouldn't charge you any money.  
 
-<img src="https://raw.githubusercontent.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key1.jpeg" width="400" height="250"> <img src="https://raw.githubusercontent.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key2.jpeg" width="400" height="250">
-<img src="https://raw.githubusercontent.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key3.jpeg" width="400" height="250"> <img src="https://raw.githubusercontent.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key4.jpeg" width="400" height="250">
+<img src="https://github.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key1.jpeg" width="400" height="250"> <img src="https://github.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key2.jpeg" width="400" height="250">
+<img src="https://github.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key3.jpeg" width="400" height="250"> <img src="https://github.com/JA-Erosa/University/blob/master/Python/GoogleAPITutorial/key4.jpeg" width="400" height="250">
 
 ## Search Nearby
 

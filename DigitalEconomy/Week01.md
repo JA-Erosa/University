@@ -20,8 +20,8 @@ This all became really apparent after the recent life change caused by COVID-19.
 
 
 #### References
-[1] Pohjola, M. (2000). Information technology and economic growth: A cross-country analysis.
-[2] Majeed, M. T., & Ayub, T. (2018). Information and communication technology (ICT) and economic growth nexus: A comparative global analysis. Pakistan Journal of Commerce and Social Sciences (PJCSS), 12(2), 443-476.
-[3] Huawei & Oxford Economics. (2017). Digital Spillover. Measuring the true impact of the Digital Economy. Retrieved from https://www.huawei.com/minisite/gci/en/digital- spillover/files/gci_digital_spillover.pdf
+- [1] Pohjola, M. (2000). Information technology and economic growth: A cross-country analysis.
+- [2] Majeed, M. T., & Ayub, T. (2018). Information and communication technology (ICT) and economic growth nexus: A comparative global analysis. Pakistan Journal of Commerce and Social Sciences (PJCSS), 12(2), 443-476.
+- [3] Huawei & Oxford Economics. (2017). Digital Spillover. Measuring the true impact of the Digital Economy. Retrieved from https://www.huawei.com/minisite/gci/en/digital- spillover/files/gci_digital_spillover.pdf
 
 #### Contributors

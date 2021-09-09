@@ -10,9 +10,9 @@
 - It started to highlight the advantages of shifting to digital actions, based on the fact that the would be instant, global and even physically less demanding than the average day-to-day transaction. More recently, describing it as "zero marginal cost intangible goods over the internet".
 ##### 6. What did Telestra (the leading Australian telecoms provider) predict about the impact of this new economy?
 - It predicted competition would become more global and more intense because of the digital economy.
-##### 7. g
-- 
-##### 8. What did Majeed and Ayub concluded on their study of 149 countries over 35 years?
+##### 7. What did Pohjola conclude on the 15 year study of 39 countries?
+- Investment in information technology, has a strong influence on economic growth in developed (OECD) countries. Its impact is almost as large as that of the rest of the capital stock.
+##### 8. What did Majeed and Ayub conclude on their study of 149 countries over 35 years?
 - That some indicators such as online service, telecommunication infrastructure and e-government are comparatively more conducive in enhancing economic growth than other ICT indicators.
 ##### 9. What does the acronym ICT stand for?
 - Information and Communication Technology. 

@@ -2,8 +2,8 @@
 
 - [Historical Context](#Historical-Context)
 - [Information Technology in Economic Rises 1](#Information-Technology-in-Economic-Rises)
-- []()
-- []()
+- [Industry 4.0 & Priors](#Industry-4.0-&-Priors)
+- [The Next Revolution in Production](#The-Next-Revolution-in-Production)
 - [References](#References)
 - [Contributors](#Contributors)
 
@@ -26,6 +26,9 @@ Using data which included information from 39 countries from all around the worl
 
 This all became really apparent after the recent life change caused by COVID-19. Where communication infrastructures proved to be the main channel in which to keep the economy going, interacting, collaborating, and exchanging information. All in all, this pandemic sped up the conversion process and forced businesses to adapt into the “new” economy business model. Many experts acknowledge the difficulty of precisely evaluating a digital economy characterized by rapidly changing products and services. By 2019, researchers estimated that “the digital economy is worth $11.5 trillion globally, equivalent to 15.5 percent of global GDP and has grown two and a half times faster than global GDP over the past 15 years.” [3]
 
+### Industry 4.0 & Priors
+
+### The Next Revolution in Production
 
 #### References
 - [1] Pohjola, M. (2000). Information technology and economic growth: A cross-country analysis.

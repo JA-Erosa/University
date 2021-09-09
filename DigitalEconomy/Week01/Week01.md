@@ -1,4 +1,8 @@
 # General View of Digital Economy
+
+[Historical Context](#Historical Context)
+[Information Technology in Economic Rises 1](#Information Technology in Economic Rises)
+
 ### Historical Context
 Digital economy refers to a type of economy where computing technologies are fully immersed in the process, where economic activities are based on these sorts of digital technologies. This can be, according to American statistician Thomas L. Mesenbourg, in any one of three different capacities:
 -	E-business infrastructure: where activities are digitalized by hardware, telecoms, networks, everything tangible that makes digital technologies what it is.
